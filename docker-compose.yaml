@@ -1,0 +1,9 @@
+services:
+  database:
+    image: 'postgres:15.2'
+    ports:
+      - '12321:5432'
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_DB=workout
+      - POSTGRES_PASSWORD=secret
