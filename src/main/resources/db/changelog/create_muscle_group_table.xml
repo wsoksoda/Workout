@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create_muscle_group_table" author="wsoksoda">
+        <createTable tableName="muscle_group">
+            <column name="id" type="VARCHAR(100)"/>
+            <column name="group" type="VARCHAR(25)"/>
+            <column name="subgroup" type="VARCHAR(25)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
