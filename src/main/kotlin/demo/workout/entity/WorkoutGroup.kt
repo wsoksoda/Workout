@@ -1,9 +1,11 @@
 package demo.workout.entity
 
+import jakarta.persistence.Entity
 import jakarta.persistence.Id
 import jakarta.persistence.OneToMany
 import java.util.*
 
+@Entity
 data class WorkoutGroup(
     @Id
     val id: UUID,

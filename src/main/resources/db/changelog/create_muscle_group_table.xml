@@ -7,7 +7,7 @@
 
     <changeSet id="create_muscle_group_table" author="wsoksoda">
         <createTable tableName="muscle_group">
-            <column name="id" type="VARCHAR(100)"/>
+            <column name="id" type="UUID"/>
             <column name="group" type="VARCHAR(25)"/>
             <column name="subgroup" type="VARCHAR(25)"/>
         </createTable>

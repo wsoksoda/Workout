@@ -7,7 +7,7 @@
 
     <changeSet id="create_workout_table" author="wsoksoda">
         <createTable tableName="workout">
-            <column name="id" type="VARCHAR(100)"/>
+            <column name="id" type="UUID"/>
             <column name="name" type="VARCHAR(100)"/>
             <column name="lift" type="VARCHAR(100)"/>
             <column name="set" type="int"/>
