@@ -1,4 +1,4 @@
-id,name,muscle_groups
-d1d17f86-249e-43e9-8e13-5fb4abc517e5,curl,"["4ec663f0-4d2d-4d80-944b-4e079401290f"]"
-989426fd-e3b4-469e-b46a-b7836271e568,skull crusher, "["d9725d4d-d556-4503-8562-3c28f3b9f8cd"]"
-cb4f62bb-a684-4164-87c8-0f2120718529,squat, "["93e9c346-f1cd-4c85-b8b8-9f4af6d284e0"]"
+id,name
+d1d17f86-249e-43e9-8e13-5fb4abc517e5,curl
+989426fd-e3b4-469e-b46a-b7836271e568,skull crusher
+cb4f62bb-a684-4164-87c8-0f2120718529,squat

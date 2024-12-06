@@ -9,5 +9,5 @@ data class MuscleGroup(
     @Id
     val id: UUID,
     val group: String,
-    val subGroup: String
+    val subgroup: String
 )

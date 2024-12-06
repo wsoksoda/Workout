@@ -12,6 +12,6 @@ fun muscleGroup(
     return MuscleGroup(
         id = id,
         group = group,
-        subGroup = subGroup
+        subgroup = subGroup
     )
 }

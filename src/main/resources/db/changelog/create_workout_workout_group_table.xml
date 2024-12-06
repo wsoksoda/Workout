@@ -5,10 +5,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="create_workout_group_table" author="wsoksoda">
-        <createTable tableName="workout_group">
-            <column name="id" type="UUID"/>
-            <column name="name" type="VARCHAR(100)"/>
+    <changeSet id="create_workout_workout_group_table" author="wsoksoda">
+        <createTable tableName="workout_workout_group">
+            <column name="workout_id" type="UUID"/>
+            <column name="workout_group_id" type="UUID"/>
         </createTable>
     </changeSet>
 

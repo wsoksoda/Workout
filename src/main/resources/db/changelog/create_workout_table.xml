@@ -9,7 +9,7 @@
         <createTable tableName="workout">
             <column name="id" type="UUID"/>
             <column name="name" type="VARCHAR(100)"/>
-            <column name="lift" type="VARCHAR(100)"/>
+            <column name="lift_id" type="UUID"/>
             <column name="set" type="int"/>
             <column name="rep" type="int"/>
         </createTable>
