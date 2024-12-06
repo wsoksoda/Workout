@@ -12,6 +12,10 @@
     <include relativeToChangelogFile="true" file="changelog/create_workout_table.xml"/>
     <include relativeToChangelogFile="true" file="changelog/create_workout_group_table.xml"/>
 
+    <!--create joining tables-->
+
+    <include relativeToChangelogFile="true" file="changelog/create_lift_muscle_group_table.xml"/>
+    <include relativeToChangelogFile="true" file="changelog/create_workout_workout_group_table.xml"/>
 
     <!--load data into tables-->
     <include relativeToChangelogFile="true" file="changelog/load_lift_data.xml"/>

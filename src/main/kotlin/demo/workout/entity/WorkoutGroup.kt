@@ -1,8 +1,6 @@
 package demo.workout.entity
 
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.OneToMany
+import jakarta.persistence.*
 import java.util.*
 
 @Entity
@@ -11,5 +9,10 @@ data class WorkoutGroup(
     val id: UUID,
     val name: String,
     @OneToMany
+    @JoinTable(
+        name = "workout_workout_group",
+        joinColumns = [JoinColumn(name = "workout_id")],
+        inverseJoinColumns = [JoinColumn(name = "workout_group_id")]
+    )
     val workouts: List<Workout>
 )
