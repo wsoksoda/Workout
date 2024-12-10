@@ -7,8 +7,16 @@
 
     <changeSet id="create_lift_muscle_group_table" author="wsoksoda">
         <createTable tableName="lift_muscle_group">
-            <column name="lift_id" type="UUID"/>
-            <column name="muscle_group_id" type="UUID"/>
+            <column name="lift_id" type="UUID">
+                    <constraints foreignKeyName="lift_muscle_group_lift_id_constraint"
+                                 referencedTableName="lift"
+                                 referencedColumnNames="id"/>
+            </column>
+            <column name="muscle_group_id" type="UUID">
+                <constraints foreignKeyName="lift_muscle_group_muscle_group_id_constraint"
+                             referencedTableName="muscle_group"
+                             referencedColumnNames="id"/>
+            </column>
         </createTable>
     </changeSet>
 

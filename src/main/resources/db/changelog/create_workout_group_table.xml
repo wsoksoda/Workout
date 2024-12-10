@@ -7,7 +7,9 @@
 
     <changeSet id="create_workout_group_table" author="wsoksoda">
         <createTable tableName="workout_group">
-            <column name="id" type="UUID"/>
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
             <column name="name" type="VARCHAR(100)"/>
         </createTable>
     </changeSet>

@@ -9,7 +9,6 @@
         <loadData tableName="workout_group" file="csv/workout_group.csv" relativeToChangelogFile="true" quotchar='"'>
             <column name="id" header="id"/>
             <column name="name" header="name"/>
-            <column name="workouts" header="workouts"/>
         </loadData>
     </changeSet>
 
