@@ -7,9 +7,15 @@
 
     <changeSet id="create_workout_table" author="wsoksoda">
         <createTable tableName="workout">
-            <column name="id" type="UUID"/>
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
             <column name="name" type="VARCHAR(100)"/>
-            <column name="lift_id" type="UUID"/>
+            <column name="lift_id" type="UUID">
+                <constraints foreignKeyName="workout_lift_id_constraint"
+                             referencedTableName="lift"
+                             referencedColumnNames="id"/>
+            </column>
             <column name="set" type="int"/>
             <column name="rep" type="int"/>
         </createTable>

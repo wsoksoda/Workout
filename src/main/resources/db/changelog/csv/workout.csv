@@ -1,1 +1,9 @@
-id,name,lift,set,rep
+id,name,lift_id,set,rep
+46d46d09-bf1e-4e6b-bef8-f8f4aa4e4d43,dumbbell seated curl,98bb6a12-4ef0-4325-9e76-b767ed086b5e,5,10
+76908cc6-576f-455a-af75-9b2b3863e193,dumbbell bench,021eeee0-9c57-472d-85f1-6d096e5a6731,5,10
+4f9153c2-a9e9-4d76-8447-68a7306670e3,hammer grip cable curl,8e82bc6d-7269-47bd-be88-4e66f99230a0,5,10
+3f56fe2b-bdc1-41aa-8ef6-e27665ba2f62,incline dumbbell bench,16fc8fef-4ade-4efa-b163-dec8ab5dbb53,5,10
+50b0503a-dab9-4e38-a5cd-e545b948dee8,seated dumbbell shoulder press,c1f4dcc3-a3cc-43a9-85c8-dc99d515566f,5,10
+5f30f84f-bd47-41dd-ac59-2bdb9ce946ba,dumbbell lateral raises,d55c4165-d09a-4bc9-adc0-151c78f7f5f1,5,10
+a33ab148-4ea1-4eaa-8a5c-a6f82858c75e,seated dumbbell arnold press,e050f480-ff23-401d-b578-153e56d039df,5,10
+a1e7ee77-b7b8-4431-86be-8be398a38909,cable shrugs,99e36905-74ba-43a4-9793-f5c2d0abd76a,5,10

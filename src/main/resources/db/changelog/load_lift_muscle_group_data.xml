@@ -5,10 +5,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="load_lift_data" author="wsoksoda">
-        <loadData tableName="lift" file="csv/lift.csv" relativeToChangelogFile="true" quotchar='"'>
-            <column name="id" header="id"/>
-            <column name="name" header="name"/>
+    <changeSet id="load_lift_muscle_group_data" author="wsoksoda">
+        <loadData tableName="lift_muscle_group" file="csv/lift_muscle_group.csv" relativeToChangelogFile="true" quotchar='"'>
+            <column name="lift_id" header="lift_id"/>
+            <column name="muscle_group_id" header="muscle_group_id"/>
         </loadData>
     </changeSet>
 

@@ -9,7 +9,7 @@
         <loadData tableName="workout" file="csv/workout.csv" relativeToChangelogFile="true" quotchar='"'>
             <column name="id" header="id"/>
             <column name="name" header="name"/>
-            <column name="lift" header="lift"/>
+            <column name="lift_id" header="lift_id"/>
             <column name="set" header="set"/>
             <column name="rep" header="rep"/>
         </loadData>
