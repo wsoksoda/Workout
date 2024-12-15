@@ -13,4 +13,8 @@ class MuscleGroupService(private val muscleGroupRepository: MuscleGroupRepositor
         val pageRequest = PageRequest.of(pageNumber?: 0, pageSize ?: 10, Sort.by(sort ?: "id"))
         return muscleGroupRepository.findAll(pageRequest)
     }
+
+    fun create(muscleGroups : List<MuscleGroup>){
+        muscleGroupRepository.saveAll(muscleGroups)
+    }
 }
