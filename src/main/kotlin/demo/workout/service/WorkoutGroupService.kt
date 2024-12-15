@@ -13,4 +13,8 @@ class WorkoutGroupService(private val workoutGroupRepository: WorkoutGroupReposi
         val pageRequest = PageRequest.of(pageNumber?: 0, pageSize ?: 10, Sort.by(sort ?: "id"))
         return workoutGroupRepository.findAll(pageRequest)
     }
+
+    fun create(workoutGroups : List<WorkoutGroup>){
+        workoutGroupRepository.saveAll(workoutGroups)
+    }
 }

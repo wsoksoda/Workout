@@ -13,4 +13,8 @@ class LiftService(private val liftRepository: LiftRepository) {
         val pageRequest = PageRequest.of(pageNumber?: 0, pageSize ?: 10, Sort.by(sort ?: "id"))
         return liftRepository.findAll(pageRequest)
     }
+
+    fun create(lifts : List<Lift>){
+        liftRepository.saveAll(lifts)
+    }
 }
