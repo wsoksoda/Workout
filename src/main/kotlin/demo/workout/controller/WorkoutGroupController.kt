@@ -3,10 +3,7 @@ package demo.workout.controller
 import demo.workout.entity.WorkoutGroup
 import demo.workout.service.WorkoutGroupService
 import org.springframework.data.domain.Page
-import org.springframework.web.bind.annotation.CrossOrigin
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @CrossOrigin(origins = ["*"], maxAge = 3600)
 @RestController
@@ -18,5 +15,10 @@ class WorkoutGroupController(private val workoutGroupService: WorkoutGroupServic
             pageSize = pageSize,
             sort = sort
         )
+    }
+    
+    @PostMapping("create-workout-groups")
+    fun create(@RequestBody workoutGroups : List<WorkoutGroup>){
+        return workoutGroupService.create(workoutGroups)
     }
 }
