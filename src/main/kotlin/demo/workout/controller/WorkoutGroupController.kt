@@ -4,6 +4,7 @@ import demo.workout.entity.WorkoutGroup
 import demo.workout.service.WorkoutGroupService
 import org.springframework.data.domain.Page
 import org.springframework.web.bind.annotation.*
+import java.util.*
 
 @CrossOrigin(origins = ["*"], maxAge = 3600)
 @RestController
@@ -14,6 +15,13 @@ class WorkoutGroupController(private val workoutGroupService: WorkoutGroupServic
             pageNumber = pageNumber,
             pageSize = pageSize,
             sort = sort
+        )
+    }
+
+    @GetMapping("get-workout-group-by-id")
+    fun getAllByID(@RequestParam id: UUID): WorkoutGroup? {
+        return workoutGroupService.getById(
+            id = id
         )
     }
     
