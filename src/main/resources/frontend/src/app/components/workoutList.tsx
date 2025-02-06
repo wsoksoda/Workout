@@ -34,10 +34,10 @@ export default function WorkoutList() {
         <Box>
             <Grid templateColumns='repeat(4, 1fr)' gap={6} m={10}>
                 {workoutData.map((workout: WorkoutGroup) => (
-                    <Card.Root>
+                    <Card.Root  key={workout.id}>
                         <Card.Body>
                             <Center>
-                                <Text key={workout.id}>
+                                <Text>
                                     {workout.name}
                                 </Text>
                             </Center>
@@ -48,7 +48,7 @@ export default function WorkoutList() {
                             {/*    />*/}
                             {/*</Center>*/}
                             <Center mt={"4"}>
-                                <Link href={"/info?id=" + workout.id}>
+                                <Link href={"/workoutGroupDetails/" + workout.id}>
                                     <Button>
                                         Info
                                     </Button>
@@ -59,5 +59,5 @@ export default function WorkoutList() {
                 ))}
             </Grid>
         </Box>
-    )
+    );
 }
