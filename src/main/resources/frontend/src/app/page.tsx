@@ -1,5 +1,5 @@
 import {Button, Center, Grid, Text, VStack,Input} from "@chakra-ui/react";
-import WorkoutList from "@/app/components/workoutList";
+import WorkoutGroupList from "@/app/components/workoutGroupList";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
                   New workout
               </Button>
           </Grid>
-          <WorkoutList/>
+          <WorkoutGroupList/>
       </VStack>
   );
 }

@@ -3,17 +3,7 @@
 import { Center, Box, Card, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-
-interface Workout {
-    id: string;
-    name: string;
-}
-
-interface WorkoutGroup {
-    id: string;
-    name: string;
-    workouts: Workout[];
-}
+import WorkoutList from "@/app/components/workoutList";
 
 export default function WorkoutGroupDetails() {
     const getWorkout = async (id: string) => {
@@ -30,20 +20,16 @@ export default function WorkoutGroupDetails() {
             getWorkout(id).then((data) => {
                 setWorkoutData(data);
             });
-            console.log(workoutData);
     }, [id]);
 
     if (!workoutData) return <Center>Loading...</Center>;
 
     return (
         <Box>
-            <Card.Root key={workoutData.id}>
-                <Card.Body>
-                    <Center>
-                        <Text> {workoutData.name}</Text>
-                    </Center>
-                </Card.Body>
-            </Card.Root>
+            <Center>
+                <Text textStyle={"5xl"}> {workoutData.name}</Text>
+            </Center>
+            <WorkoutList workouts={workoutData.workouts}/>
         </Box>
     );
 }
