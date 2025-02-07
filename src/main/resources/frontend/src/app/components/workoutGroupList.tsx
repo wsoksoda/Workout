@@ -1,3 +1,6 @@
+"use client"
+
+import React, {useEffect, useState} from "react";
 import {
     Grid,
     Card,
@@ -8,17 +11,30 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link'
 
-interface Props {
-    workouts: Array<Workout>
-}
+export default function WorkoutGroupList() {
 
-export default function WorkoutList(props: Props) {
+    const getAllWorkouts= async (pageNumber: Number, pageSize: Number, sort: String) => {
+        const res = await fetch('http://localhost:1234/get-all-workout-groups?pageNumber=' + pageNumber + '&pageSize=' + pageSize);
+        return res.json();
+    }
+
+    const [workoutData, setWorkoutData] = useState([]);
+    const [pageNumber, setPageNumber] = useState(0);
+    const [pageSize, setPageSize] = useState(12);
+
+    useEffect(() => {
+        getAllWorkouts(pageNumber, pageSize, "").then((data) => {
+            setWorkoutData(data.content)
+            setPageNumber(data.pageable.pageNumber)
+            setPageSize(data.pageable.pageSize)
+        });
+    }, [pageNumber]);
 
     return (
         <Box>
             <Grid templateColumns='repeat(4, 1fr)' gap={6} m={10}>
-                {props.workouts.map((workout: Workout) => (
-                    <Card.Root key={workout.id}>
+                {workoutData.map((workout: WorkoutGroup) => (
+                    <Card.Root  key={workout.id}>
                         <Card.Body>
                             <Center>
                                 <Text>
@@ -32,16 +48,11 @@ export default function WorkoutList(props: Props) {
                             {/*    />*/}
                             {/*</Center>*/}
                             <Center mt={"4"}>
-                                <Link href={"/liftDetails/" + workout.id}>
+                                <Link href={"/workoutGroupDetails/" + workout.id}>
                                     <Button>
-                                        Lift Info
+                                        Info
                                     </Button>
                                 </Link>
-                            </Center>
-                            <Center>
-                            <Text>
-                                Sets:{workout.set}  Reps:{workout.rep}
-                            </Text>
                             </Center>
                         </Card.Body>
                     </Card.Root>
